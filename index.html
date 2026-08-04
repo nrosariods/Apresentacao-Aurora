@@ -321,7 +321,7 @@ img{display:block;max-width:100%;}
 .rdot{fill:var(--lime);filter:drop-shadow(0 0 8px rgba(203,230,15,.9));}
 
 #s1 .s-inner{display:flex;flex-direction:column;align-items:center;}
-.hero-logo{width:min(62vw,258px);margin-bottom:clamp(22px,4vh,54.6px);}
+.hero-logo{width:min(62vw,258px);margin:0 auto clamp(22px,4vh,54.6px);display:block;}
 .hero-kicker{
   display:inline-flex;align-items:center;gap:10px;
   padding:8px 18px;border-radius:99px;
@@ -506,6 +506,36 @@ img{display:block;max-width:100%;}
 }
 .t-light .lead .prazo,.t-light2 .lead .prazo{color:var(--navy-900);}
 .lead .prazo i{font-style:normal;font-size:.6em;font-weight:600;opacity:.6;margin:0 4px;letter-spacing:.06em;}
+
+/* ============================================================
+   SLIDE · OTD Mensal (Aurora)
+   ============================================================ */
+.otd-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.4vw,26px);margin-top:clamp(14px,2.2vh,32px);}
+.otd-chart{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(10px,1.2vw,22px);
+  margin-top:clamp(18px,3vh,40px);align-items:end;
+}
+.otd-col{display:flex;flex-direction:column;align-items:center;gap:10px;min-width:0;}
+.otd-track{
+  width:100%;max-width:78px;height:clamp(140px,28vh,250px);
+  border-radius:14px;background:rgba(255,255,255,.06);border:1px solid var(--hair);
+  display:flex;align-items:flex-end;padding:6px;overflow:hidden;
+}
+.t-light .otd-track,.t-light2 .otd-track{background:rgba(1,49,107,.04);}
+.otd-fill{
+  width:100%;border-radius:10px;
+  background:linear-gradient(180deg,var(--lime),rgba(203,230,15,.55));
+  box-shadow:0 10px 24px -14px rgba(203,230,15,.8);
+  transition:height 1.1s .25s var(--ease);
+}
+.otd-val{font-family:var(--font-display);font-weight:800;font-size:clamp(16px,1.6vw,28px);color:var(--lime);letter-spacing:-.02em;font-variant-numeric:tabular-nums;}
+.t-light .otd-val,.t-light2 .otd-val{color:var(--navy-900);}
+.otd-mo{font-size:clamp(11px,.85vw,14px);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-dim);}
+.otd-exact{font-size:clamp(10px,.78vw,12.5px);color:var(--fg-dim);opacity:.8;}
+@media (max-width:900px){
+  .otd-kpis{grid-template-columns:1fr;}
+  .otd-chart{grid-template-columns:repeat(3,1fr);}
+}
 
 /* ============================================================
    SLIDE 5 · Frota
@@ -914,7 +944,7 @@ img{display:block;max-width:100%;}
 <nav id="dotnav" class="on-dark" aria-label="Navegação entre slides"></nav>
 
 <div class="deck-ctrl on-dark">
-  <span class="count"><b id="cNow">01</b> / <span id="cTot">14</span></span>
+  <span class="count"><b id="cNow">01</b> / <span id="cTot">15</span></span>
   <button id="btnPrev" title="Slide anterior (↑)" aria-label="Slide anterior"><svg><use href="#i-arrow-u"/></svg></button>
   <button id="btnNext" title="Próximo slide (↓)" aria-label="Próximo slide"><svg><use href="#i-arrow-d"/></svg></button>
   <button id="btnFull" title="Tela cheia (F)" aria-label="Tela cheia"><svg><use href="#i-expand"/></svg></button>
@@ -968,7 +998,7 @@ img{display:block;max-width:100%;}
 
     <div class="two-col top">
       <div class="story">
-        <p class="lede rv" style="--i:2">A <strong>TruckBem Transportes</strong> iniciou suas operações em <strong>2024</strong>, tendo a <strong>Aurora Fine Brands</strong> como seu primeiro grande cliente.</p>
+        <p class="lede rv" style="--i:2">A <strong>TruckBem Transportes</strong> iniciou suas operações em <strong>2024</strong>, tendo a <strong>Aurora Fine Brands</strong></p>
         <p class="lede rv" style="--i:3">Desde o início, nosso compromisso foi oferecer uma operação baseada em atendimento próximo, comunicação transparente e excelência operacional.</p>
         <p class="lede rv" style="--i:4">Ao longo dessa trajetória, estruturamos uma operação sólida, expandimos nossa carteira de clientes e consolidamos processos voltados à qualidade, segurança e eficiência logística.</p>
         <div class="quote rv" style="--i:5">Atendimento próximo, comunicação transparente e excelência operacional — o mesmo compromisso do primeiro dia.</div>
@@ -979,33 +1009,33 @@ img{display:block;max-width:100%;}
         <div class="tl-fill"></div>
         <div class="tl-item rv" style="--i:2">
           <div class="tl-dot"></div>
-          <div class="tl-tag">2024 · Início</div>
+          <div class="tl-tag">Início</div>
           <div class="tl-title">Início das operações</div>
-          <div class="tl-desc">Nascimento da TruckBem Transportes, com base administrativa em Santana de Parnaíba (SP).</div>
+          <div class="tl-desc">Começamos operando os 3 estados dividindo a região com outra transportadora.</div>
         </div>
         <div class="tl-item rv" style="--i:3">
           <div class="tl-dot"></div>
           <div class="tl-tag">2024 · Aurora</div>
-          <div class="tl-title">Aurora Fine Brands, primeiro grande cliente</div>
+          <div class="tl-title">Aurora Fine Brands</div>
           <div class="tl-desc">Estruturação de uma operação dedicada, com atendimento próximo e comunicação transparente.</div>
         </div>
         <div class="tl-item rv" style="--i:4">
           <div class="tl-dot"></div>
-          <div class="tl-tag">Estruturação</div>
-          <div class="tl-title">Centro operacional e frota</div>
-          <div class="tl-desc">Centro operacional em Itapevi (SP), frota própria e rede de agregados em operação.</div>
+          <div class="tl-tag">2025 · Início</div>
+          <div class="tl-title">100% Atendimento na região sul</div>
+          <div class="tl-desc">Iniciando trabalhos com veículos dedicados e fiorinos frota e agregado — com apenas 3 veículos.</div>
         </div>
         <div class="tl-item rv" style="--i:5">
           <div class="tl-dot"></div>
-          <div class="tl-tag">Expansão</div>
-          <div class="tl-title">Malha regional com parceiros homologados</div>
-          <div class="tl-desc">Integração de parceiros no Paraná, Santa Catarina e Rio Grande do Sul sob o padrão TruckBem.</div>
+          <div class="tl-tag">Expansão (2025 - final do ano)</div>
+          <div class="tl-title">Atendimento em Cariacica</div>
+          <div class="tl-desc">Atendimento em Cariacica com os veículos dedicados, com cerca de 10 fiorinos e 3 VUCs de atendimento diário.</div>
         </div>
         <div class="tl-item rv" style="--i:6">
           <div class="tl-dot"></div>
           <div class="tl-tag">Hoje</div>
           <div class="tl-title">Operação consolidada</div>
-          <div class="tl-desc">Carteira de clientes ampliada e processos consolidados em qualidade, segurança e eficiência logística.</div>
+          <div class="tl-desc">Operando com mais de 20 fiorinos na cidade de São Paulo e região diária; Atendimento do nosso cd de Itapevi para região norte do paraná; 100% atendimento do sul do pais; veículo Eletrico a disposição para cargas em grandes clientes; 2 vucs; 1 3/4; 1 Truck.</div>
         </div>
       </div>
     </div>
@@ -1035,7 +1065,7 @@ img{display:block;max-width:100%;}
           <div class="cap">Responsável por</div>
           <ul class="duties">
             <li><svg><use href="#i-check"/></svg> Financeiro</li>
-            <li><svg><use href="#i-check"/></svg> Atendimento</li>
+            <li><svg><use href="#i-check"/></svg> Torre de Controle.</li>
             <li><svg><use href="#i-check"/></svg> Operação</li>
             <li><svg><use href="#i-check"/></svg> Gestão administrativa</li>
           </ul>
@@ -1061,13 +1091,13 @@ img{display:block;max-width:100%;}
           <div class="cap">Responsável por</div>
           <ul class="duties">
             <li><svg><use href="#i-check"/></svg> Recebimento de cargas</li>
-            <li><svg><use href="#i-check"/></svg> Separação e conferência</li>
+            <li><svg><use href="#i-check"/></svg> Separação e Picking.</li>
             <li><svg><use href="#i-check"/></svg> Expedição</li>
             <li><svg><use href="#i-check"/></svg> Apoio operacional</li>
           </ul>
           <div class="unit-meta">
-            <span class="chip hi"><svg><use href="#i-layers"/></svg> 8.500 m² de área operacional</span>
-            <span class="chip hi"><svg><use href="#i-boxes"/></svg> 5.000+ posições-palete</span>
+            <span class="chip hi"><svg><use href="#i-layers"/></svg> 3.500 m² de área operacional</span>
+            <span class="chip hi"><svg><use href="#i-boxes"/></svg> 3.000+ posições-palete</span>
           </div>
         </div>
       </div>
@@ -1204,22 +1234,22 @@ img{display:block;max-width:100%;}
 
       <div class="mesh-grid">
         <div class="card pcard lift rv" style="--i:3">
-          <div class="pmark">RS</div>
-          <div class="puf">Rio Grande do Sul</div>
-          <h3>Renovação Logística</h3>
-          <p class="pst">Centro de distribuição parceiro para toda a malha gaúcha.</p>
+          <div class="pmark">PR</div>
+          <div class="puf">Paraná</div>
+          <h3>Centro de distribuição</h3>
+          <p class="pst">Centro de distribuição parceiro para a malha paranaense.</p>
         </div>
         <div class="card pcard lift rv" style="--i:4">
           <div class="pmark">SC</div>
           <div class="puf">Santa Catarina</div>
-          <h3>CDLOG</h3>
+          <h3>Centro de distribuição</h3>
           <p class="pst">Centro de distribuição parceiro para o estado de Santa Catarina.</p>
         </div>
         <div class="card pcard lift rv" style="--i:5">
-          <div class="pmark">PR</div>
-          <div class="puf">Paraná</div>
-          <h3>GVM Logística</h3>
-          <p class="pst">Centro de distribuição parceiro para a malha paranaense.</p>
+          <div class="pmark">RS</div>
+          <div class="puf">Rio Grande do Sul</div>
+          <h3>Centro de distribuição</h3>
+          <p class="pst">Centro de distribuição parceiro para toda a malha gaúcha.</p>
         </div>
       </div>
 
@@ -1246,15 +1276,13 @@ img{display:block;max-width:100%;}
 
     <div class="logo-grid">
       <div class="logo-tile feat rv-s" style="--i:2">
-        <span class="rib">Primeiro grande cliente</span>
         <img src="assets/clients/aurora.png" alt="Aurora Fine Brands" loading="lazy">
       </div>
-      <div class="logo-tile rv-s" style="--i:3"><span class="wm">Luckau<small>Transportes</small></span></div>
+      <div class="logo-tile rv-s" style="--i:3"><span class="wm">Luckau<small>Chocolates</small></span></div>
       <div class="logo-tile rv-s" style="--i:4"><img src="assets/clients/chocolife.jpg" alt="Chocolife" loading="lazy"></div>
       <div class="logo-tile rv-s" style="--i:5"><img src="assets/clients/santista.jpg" alt="Santista" loading="lazy"></div>
-      <div class="logo-tile rv-s" style="--i:6"><img src="assets/clients/laffin.png" alt="Laffin" loading="lazy"></div>
-      <div class="logo-tile rv-s" style="--i:7"><img src="assets/clients/gv.png" alt="GV Logística" loading="lazy"></div>
-      <div class="logo-tile rv-s" style="--i:8"><img src="assets/clients/emj.jpg" alt="EMJ Logística" loading="lazy"></div>
+      <div class="logo-tile rv-s" style="--i:6"><img src="assets/clients/gv.png" alt="GV Logística" loading="lazy"></div>
+      <div class="logo-tile rv-s" style="--i:7"><span class="wm">Gerdau</span></div>
     </div>
   </div>
 </section>
@@ -1305,7 +1333,7 @@ img{display:block;max-width:100%;}
   <div class="s-inner">
     <div class="s-head">
       <div class="eyebrow rv" style="--i:0">Fluxo 01</div>
-      <h2 class="rv" style="--i:1">Distribuição Fracionada <em>— Interior de SP e Maringá</em></h2>
+      <h2 class="rv" style="--i:1">Distribuição Fracionada <em>— Interior de SP e Norte do Paraná</em></h2>
     </div>
 
     <ol class="steps n5">
@@ -1353,7 +1381,7 @@ img{display:block;max-width:100%;}
           <p>Distribuição realizada <strong>exclusivamente com a frota própria</strong> da TruckBem.</p>
           <ul>
             <li>Interior de São Paulo</li>
-            <li>Região de Maringá (PR)</li>
+            <li>Norte do Paraná</li>
           </ul>
         </div>
       </li>
@@ -1412,22 +1440,22 @@ img{display:block;max-width:100%;}
 
     <div class="cd-row">
       <div class="card cd lift rv" style="--i:7">
-        <div class="cdmark">RS</div>
-        <div><div class="cdname">Renovação Logística</div><div class="cdst"><svg><use href="#i-arrow-r"/></svg> Rio Grande do Sul</div></div>
+        <div class="cdmark">PR</div>
+        <div><div class="cdname">Centro de distribuição</div><div class="cdst"><svg><use href="#i-arrow-r"/></svg> Paraná</div></div>
       </div>
       <div class="card cd lift rv" style="--i:8">
         <div class="cdmark">SC</div>
-        <div><div class="cdname">CDLOG</div><div class="cdst"><svg><use href="#i-arrow-r"/></svg> Santa Catarina</div></div>
+        <div><div class="cdname">Centro de distribuição</div><div class="cdst"><svg><use href="#i-arrow-r"/></svg> Santa Catarina</div></div>
       </div>
       <div class="card cd lift rv" style="--i:9">
-        <div class="cdmark">PR</div>
-        <div><div class="cdname">GVM Logística</div><div class="cdst"><svg><use href="#i-arrow-r"/></svg> Paraná</div></div>
+        <div class="cdmark">RS</div>
+        <div><div class="cdname">Centro de distribuição</div><div class="cdst"><svg><use href="#i-arrow-r"/></svg> Rio Grande do Sul</div></div>
       </div>
     </div>
 
     <div class="callout rv" style="--i:10">
       <div class="cico"><svg class="ico"><use href="#i-eye"/></svg></div>
-      <p>A TruckBem coordena a operação até o parceiro e acompanha continuamente a distribuição regional — comunicação, rastreabilidade e tratativa de ocorrências até a confirmação da entrega. <span>Mesmo quando a entrega é realizada por parceiros, toda a gestão permanece sob responsabilidade da TruckBem.</span></p>
+      <p>A TruckBem coordena a operação e acompanha continuamente a distribuição regional — comunicação, rastreabilidade e tratativa de ocorrências até a confirmação da entrega. <span>Mesmo quando a entrega é realizada por parceiros, toda a gestão permanece sob responsabilidade da TruckBem.</span></p>
     </div>
   </div>
 </section>
@@ -1594,13 +1622,14 @@ img{display:block;max-width:100%;}
           </thead>
           <tbody>
             <tr class="rv" style="--i:2"><td><div class="reg"><span class="uf">SP</span><span>São Paulo — Capital</span></div></td><td><span class="prazo">D+1 <i>a</i> D+2</span></td></tr>
-            <tr class="rv" style="--i:3"><td><div class="reg"><span class="uf">SP</span><span>Interior de São Paulo</span></div></td><td><span class="prazo">D+1 <i>a</i> D+3</span></td></tr>
-            <tr class="rv" style="--i:4"><td><div class="reg"><span class="uf">PR</span><span>Paraná</span></div></td><td><span class="prazo">D+4 <i>a</i> D+9</span></td></tr>
-            <tr class="rv" style="--i:5"><td><div class="reg"><span class="uf">SC</span><span>Santa Catarina</span></div></td><td><span class="prazo">D+4 <i>a</i> D+9</span></td></tr>
-            <tr class="rv" style="--i:6"><td><div class="reg"><span class="uf">RS</span><span>Rio Grande do Sul</span></div></td><td><span class="prazo">D+4 <i>a</i> D+9</span></td></tr>
+            <tr class="rv" style="--i:3"><td><div class="reg"><span class="uf">SP</span><span>Interior de São Paulo</span></div></td><td><span class="prazo">D+1 <i>a</i> D+5</span></td></tr>
+            <tr class="rv" style="--i:4"><td><div class="reg"><span class="uf">ES</span><span>Espírito Santo</span></div></td><td><span class="prazo">D+3 <i>a</i> D+5</span></td></tr>
+            <tr class="rv" style="--i:5"><td><div class="reg"><span class="uf">PR</span><span>Paraná</span></div></td><td><span class="prazo">D+4 <i>a</i> D+9</span></td></tr>
+            <tr class="rv" style="--i:6"><td><div class="reg"><span class="uf">SC</span><span>Santa Catarina</span></div></td><td><span class="prazo">D+4 <i>a</i> D+9</span></td></tr>
+            <tr class="rv" style="--i:7"><td><div class="reg"><span class="uf">RS</span><span>Rio Grande do Sul</span></div></td><td><span class="prazo">D+4 <i>a</i> D+9</span></td></tr>
           </tbody>
         </table>
-        <p class="tiny rv" style="--i:7;margin-top:14px;max-width:70ch;">Os prazos podem sofrer ajustes conforme o destino, a programação de coleta e as particularidades operacionais de cada região.</p>
+        <p class="tiny rv" style="--i:8;margin-top:14px;max-width:70ch;">Os prazos podem sofrer ajustes conforme o destino, a programação de coleta e as particularidades operacionais de cada região.</p>
       </div>
 
       <div class="map-box rv-s" style="--i:3">
@@ -1622,9 +1651,88 @@ img{display:block;max-width:100%;}
 </section>
 
 <!-- ==================================================================
-     SLIDE 14 · EXCELÊNCIA OPERACIONAL
+     SLIDE 14 · OTD MENSAL (AURORA)
      ================================================================== -->
-<section class="slide t-deep" id="s14" data-label="Excelência Operacional">
+<section class="slide t-light" id="s14" data-label="OTD Mensal">
+  <div class="grain"></div>
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="eyebrow rv" style="--i:0">Margem de atendimento</div>
+      <h2 class="rv" style="--i:1">OTD Mensal <em>· Aurora 2026</em></h2>
+      <p class="lede rv" style="--i:2">Desempenho de On-Time Delivery da operação Aurora Fine Brands no primeiro semestre de 2026.</p>
+    </div>
+
+    <div class="otd-kpis">
+      <div class="card stat rv" style="--i:3">
+        <div class="sico"><svg class="ico"><use href="#i-target"/></svg></div>
+        <div>
+          <div class="num">92%</div>
+          <div class="lbl">Média semestral arredondada</div>
+        </div>
+      </div>
+      <div class="card stat rv" style="--i:4">
+        <div class="sico"><svg class="ico"><use href="#i-bolt"/></svg></div>
+        <div>
+          <div class="num">95%</div>
+          <div class="lbl">Melhor mês · Fevereiro</div>
+        </div>
+      </div>
+      <div class="card stat rv" style="--i:5">
+        <div class="sico"><svg class="ico"><use href="#i-eye"/></svg></div>
+        <div>
+          <div class="num">6</div>
+          <div class="lbl">Meses monitorados em 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="otd-chart" aria-label="Gráfico de OTD mensal Aurora 2026">
+      <div class="otd-col rv" style="--i:3">
+        <div class="otd-val">93%</div>
+        <div class="otd-track"><div class="otd-fill" style="height:93%"></div></div>
+        <div class="otd-mo">Jan</div>
+        <div class="otd-exact">94,9%</div>
+      </div>
+      <div class="otd-col rv" style="--i:4">
+        <div class="otd-val">95%</div>
+        <div class="otd-track"><div class="otd-fill" style="height:95%"></div></div>
+        <div class="otd-mo">Fev</div>
+        <div class="otd-exact">94,4%</div>
+      </div>
+      <div class="otd-col rv" style="--i:5">
+        <div class="otd-val">85%</div>
+        <div class="otd-track"><div class="otd-fill" style="height:85%"></div></div>
+        <div class="otd-mo">Mar</div>
+        <div class="otd-exact">83,5%</div>
+      </div>
+      <div class="otd-col rv" style="--i:6">
+        <div class="otd-val">92%</div>
+        <div class="otd-track"><div class="otd-fill" style="height:92%"></div></div>
+        <div class="otd-mo">Abr</div>
+        <div class="otd-exact">91,4%</div>
+      </div>
+      <div class="otd-col rv" style="--i:7">
+        <div class="otd-val">93%</div>
+        <div class="otd-track"><div class="otd-fill" style="height:93%"></div></div>
+        <div class="otd-mo">Mai</div>
+        <div class="otd-exact">92,0%</div>
+      </div>
+      <div class="otd-col rv" style="--i:8">
+        <div class="otd-val">92%</div>
+        <div class="otd-track"><div class="otd-fill" style="height:92%"></div></div>
+        <div class="otd-mo">Jun</div>
+        <div class="otd-exact">91,2%</div>
+      </div>
+    </div>
+
+    <p class="note rv" style="--i:9;margin-top:clamp(16px,2.6vh,28px);">Valores apresentados arredondados para comunicação institucional; percentuais exatos exibidos abaixo de cada mês.</p>
+  </div>
+</section>
+
+<!-- ==================================================================
+     SLIDE 15 · EXCELÊNCIA OPERACIONAL
+     ================================================================== -->
+<section class="slide t-deep" id="s15" data-label="Excelência Operacional">
   <div class="grain"></div>
   <svg class="hero-routes" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="opacity:.5">
     <path class="rline b" d="M-120 200C260 150 520 300 880 190S1360 90 1580 40"/>
