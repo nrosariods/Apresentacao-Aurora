@@ -322,6 +322,30 @@ img{display:block;max-width:100%;}
 
 #s1 .s-inner{display:flex;flex-direction:column;align-items:center;}
 .hero-logo{width:min(62vw,258px);margin:0 auto clamp(22px,4vh,54.6px);display:block;}
+.hero-brand{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;width:min(72vw,300px);margin:0 auto clamp(22px,4vh,54.6px);
+}
+.hero-brand-mark{
+  width:clamp(72px,12vw,118px);height:auto;display:block;margin:0 auto;
+}
+.hero-brand-lockup{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;margin-top:clamp(14px,2.2vh,22px);width:100%;
+}
+.hero-brand-name{
+  display:block;width:100%;text-align:center;
+  font-family:var(--font-display);font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(28px,4.2vw,48px);line-height:1;color:var(--ink);
+}
+.hero-brand-name span{color:var(--lime);}
+.hero-brand-sub{
+  display:block;width:100%;text-align:center;
+  margin-top:clamp(8px,1.2vh,12px);
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(12px,1.55vw,18px);letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(234,241,251,.88);line-height:1.1;
+}
 .hero-kicker{
   display:inline-flex;align-items:center;gap:10px;
   padding:8px 18px;border-radius:99px;
@@ -967,7 +991,13 @@ img{display:block;max-width:100%;}
   </svg>
 
   <div class="s-inner">
-    <img class="hero-logo rv" style="--i:0" src="assets/logo-stack-white.svg" alt="TruckBem Transportes">
+    <div class="hero-brand rv" style="--i:0" role="img" aria-label="TruckBem Transportes">
+      <img class="hero-brand-mark" src="assets/logo-mark-white.svg" alt="">
+      <div class="hero-brand-lockup">
+        <span class="hero-brand-name">Truck<span>Bem</span></span>
+        <span class="hero-brand-sub">Transportes</span>
+      </div>
+    </div>
     <h1 class="hero-title rv" style="--i:1">Apresentação Institucional</h1>
     <p class="hero-sub rv" style="--i:2">Operação Aurora Fine Brands</p>
     <div class="hero-rule rv" style="--i:3"></div>
